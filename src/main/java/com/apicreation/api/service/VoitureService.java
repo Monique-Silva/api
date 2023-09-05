@@ -15,11 +15,10 @@ public class VoitureService implements Iterable {
 @Autowired
     private VoitureRepository voitureRepository;
 
-
+/**
     public Iterable List<Voiture> getVoitures() {
  *         List<Hero> heroes = new ArrayList<Hero>(); //initialisation de la liste des hero
- *
-
+ */
 public Optional<Voiture> getVoiture(final Long id) {
     return voitureRepository.findById(id);
 }
