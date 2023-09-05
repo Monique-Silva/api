@@ -3,10 +3,10 @@
 
 package com.apicreation.api.repository;
 
-import com.apicreation.api.model.Voiture;
+import com.apicreation.api.model.Voitures;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository //spécialisation de @Component pour indiquer le rôle de la class et que la même est un bean à exploiter
-public interface VoitureRepository extends CrudRepository<Voiture, Long> {
+public interface VoitureRepository extends CrudRepository<Voitures, Long> {
 }

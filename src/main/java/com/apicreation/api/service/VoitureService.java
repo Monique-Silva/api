@@ -1,38 +1,34 @@
 package com.apicreation.api.service;
 
-import com.apicreation.api.model.Voiture;
+import com.apicreation.api.model.Voitures;
 import com.apicreation.api.repository.VoitureRepository;
-import lombok.Data;
+//import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Optional;
 
-@Data
+//@Data
 @Service
-public class VoitureService implements Iterable {
-@Autowired
+public class VoitureService {
+
+    @Autowired
     private VoitureRepository voitureRepository;
 
-/**
-    public Iterable List<Voiture> getVoitures() {
- *         List<Hero> heroes = new ArrayList<Hero>(); //initialisation de la liste des hero
- */
-public Optional<Voiture> getVoiture(final Long id) {
-    return voitureRepository.findById(id);
-}
-public Iterable<Voiture> getVoitures() {
-    return voitureRepository.findAll();
-}
+    public <Voitures> Optional<Voitures> getVoiture(final Long id) {
+        return (Optional<Voitures>) voitureRepository.findById(id);
+    }
 
-public void deleteVoiture(final Long id) {
-    voitureRepository.deleteById(id);
-}
+    public Iterable<Voitures> getVoitures() {
+        return voitureRepository.findAll();
+    }
 
-public Voiture saveVoiture(Voiture voiture) {
-    Voiture savedVoiture = voitureRepository.save(voiture);
-    return savedVoiture;
-}
+    public void deleteVoiture(final Long id) {
+        voitureRepository.deleteById(id);
+    }
 
+    public Voitures saveVoiture(Voitures voitures) {
+        Voitures savedVoiture = voitureRepository.save(voitures);
+        return savedVoiture;
+    }
 }
