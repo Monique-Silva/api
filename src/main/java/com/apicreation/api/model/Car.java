@@ -1,26 +1,24 @@
 package com.apicreation.api.model;
 
-import jakarta.persistence.*;
-
 //@Data //librairie lombok, pas besoin dajouter des getters et setters
-@Entity //indique que la classe correspond à une table de la bdd
-//@Table(name="Voitures")
-public class Voitures {
+//@Entity //indique que la classe correspond à une table de la bdd
+//@Table(name="Car")
+public class Car {
 
-    @Id //cle primaire
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //pour l'autoincrementation
+    //@Id //cle primaire
+    //@GeneratedValue(strategy = GenerationType.IDENTITY) //pour l'autoincrementation
     private int id;
     private String marque;
     private String modele;
     private String couleur;
 
-    public Voitures() {
+    public Car() {
         this.id = id;
         this.marque = marque;
         this.modele = modele;
         this.couleur = couleur;
     }
-    public Voitures(int id, String marque, String modele, String couleur) {
+    public Car(int id, String marque, String modele, String couleur) {
         this.id = id;
         this.marque = marque;
         this.modele = modele;
